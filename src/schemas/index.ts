@@ -1,1 +1,5 @@
-export { TopportunityCreate, TOpportunity } from "./opportunity.schema";
+export {
+   TopportunityCreate,
+   TOpportunity,
+   TOpportunityUpdate
+} from "./opportunity.schema";
