@@ -8,12 +8,12 @@ export class OpportunityServices {
    };
 
    async findMany(): Promise<TOpportunity[]> {
-      const data = await prisma.oppotunity.findMany();
+      const data = await prisma.oppotunity.findMany({ include: { Application: true } });
       return data;
    };
 
    async findOne(id: number): Promise<TOpportunity> {
-      const data = await prisma.oppotunity.findUnique({ where: { id } });
+      const data = await prisma.oppotunity.findUnique({ where: { id }, include: { Application: true } });
 
       return data as TOpportunity;
    };
