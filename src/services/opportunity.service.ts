@@ -13,7 +13,7 @@ export class OpportunityServices {
    };
 
    async findOne(id: number): Promise<TOpportunity> {
-      const data = await prisma.oppotunity.findUnique({ where: { id: id } });
+      const data = await prisma.oppotunity.findUnique({ where: { id } });
 
       return data as TOpportunity;
    };
@@ -24,7 +24,7 @@ export class OpportunityServices {
       return data;
    };
 
-   async delete() {
-
+   async delete(id: number): Promise<void> {
+      await prisma.oppotunity.delete({ where: { id } })
    };
 }
