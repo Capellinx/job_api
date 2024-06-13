@@ -29,6 +29,8 @@ export class OpportunityControllers {
    };
 
    delete = async (req: Request, res: Response) => {
+      await this.opportunityServices.delete(Number(req.params.id));
 
+      return res.status(204).json();
    };
 };
