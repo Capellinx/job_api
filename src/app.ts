@@ -1,5 +1,6 @@
-
+import "express-async-errors"
 import { opportunityRouter } from "./routes";
+import { HandleErrors } from "./middlewares";
 
 import express, { json } from "express";
 import helmet from "helmet";
