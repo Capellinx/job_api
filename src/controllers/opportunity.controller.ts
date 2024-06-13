@@ -22,11 +22,13 @@ export class OpportunityControllers {
       return res.status(200).json(response);
    };
 
-   async update(req: Request, res: Response) {
+   update = async (req: Request, res: Response) => {
+      const response = await this.opportunityServices.update(Number(req.params.id), req.body);
 
+      return res.status(200).json(response);
    };
 
-   async delete(req: Request, res: Response) {
+   delete = async (req: Request, res: Response) => {
 
    };
 };
