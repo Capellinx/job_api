@@ -9,7 +9,7 @@ export class HandleErrors {
       }
 
       if (error instanceof ZodError) {
-         return res.status(422).json({ message: error.message })
+         return res.status(422).json({ message: error.errors })
       }
 
       console.log(`Aqui deu o ERRO => ${error}`);
