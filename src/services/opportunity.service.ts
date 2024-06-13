@@ -12,10 +12,8 @@ export class OpportunityServices {
       return data;
    };
 
-   async findOne(id: number): Promise<TOpportunity> {
-      const data = await prisma.oppotunity.findUnique({ where: { id }, include: { Application: true } });
-
-      return data as TOpportunity;
+   findOne(opportunity: TOpportunity): TOpportunity {
+      return opportunity;
    };
 
    async update(id: number, body: TOpportunityUpdate): Promise<TOpportunity> {
