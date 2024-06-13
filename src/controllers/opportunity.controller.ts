@@ -1,23 +1,27 @@
 import { Request, Response } from "express";
+import { OpportunityServices } from "../services";
 
 export class OpportunityControllers {
-   public create(req: Request, res: Response) {
+   private opportunityServices = new OpportunityServices()
+
+   create = async (req: Request, res: Response) => {
+      const response = await this.opportunityServices.create(req.body);
+
+      return res.status(201).json(response);
+   };
+
+   findMany = async (req: Request, res: Response) => {
+   };
+
+   async findOne(req: Request, res: Response) {
 
    };
 
-   public findMany(req: Request, res: Response) {
+   async update(req: Request, res: Response) {
 
    };
 
-   public findOne(req: Request, res: Response) {
-
-   };
-
-   public update(req: Request, res: Response) {
-
-   };
-   
-   public delete(req: Request, res: Response) {
+   async delete(req: Request, res: Response) {
 
    };
 };
