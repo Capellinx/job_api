@@ -1,0 +1,1 @@
+export { HandleErrors } from "./handleErrors.middlewares";
