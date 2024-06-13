@@ -16,8 +16,8 @@ export class OpportunityControllers {
       return res.status(200).json(response);
    };
 
-   findOne = async (req: Request, res: Response) => {
-      const response = await this.opportunityServices.findOne(Number(req.params.id));
+   findOne= (req: Request, res: Response) => {
+      const response = this.opportunityServices.findOne(res.locals.opportunity);
 
       return res.status(200).json(response);
    };
