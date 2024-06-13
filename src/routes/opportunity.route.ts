@@ -12,4 +12,4 @@ opportunityRouter.get("/:id", opportunityController.findOne)
 opportunityRouter.patch("/:id", opportunityController.update)
 opportunityRouter.delete("/:id", opportunityController.delete)
 
-opportunityRouter.use("/:id/applications", applicationRouter)
+opportunityRouter.use("/", applicationRouter)

@@ -5,5 +5,5 @@ export const applicationRouter = Router()
 
 const applicationController = new ApplicationController()
 
-applicationRouter.post("/", applicationController.create)
-applicationRouter.get("/", applicationController.findMany)
+applicationRouter.post("/:id/applications", applicationController.create)
+applicationRouter.get("/:id/applications", applicationController.findMany)
